@@ -16,7 +16,7 @@ int main(void)
 
 
 
-	j= 1;
+	j = 1;
 
 	k = 2;
 
