@@ -33,6 +33,7 @@ int main(void)
 		{
 
 			sum = sum + j;
+		}
 
 			next = j + k;
 
@@ -48,4 +49,3 @@ int main(void)
 
 	}
 
-}
