@@ -1,39 +1,23 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <math.h>
+#include "main.h"
 
 /**
- * main - print password.
- *
- * Return: 0.
+ * *_strcpy - copies the string pointed to by src, including \0.
+ *@src: pointer.
+ *@dest: pointer.
+ *Return: the pointer to dest.
  */
 
-int main(void)
+char *_strcpy(char *dest, char *src)
 {
-	int ascii = 2772, i = 0, j, random;
-	char password[100];
-	time_t t;
+	int i, length;
 
-	srand((int) time(&t));
-	while (ascii > 126)
+	for (length = 0; src[length] != '\0'; length++)
 	{
-		random = rand() % 126;
-		password[i] = random;
-		ascii -= random;
-		i++;
 	}
-	if (ascii > 0)
-		password[i] = ascii;
-	else
-	{
-		i--;
-	}
-	
 
-	for (j = 0; j <= i; j++)
+	for (i = 0; i <= length ; i++)
 	{
-		printf("%c", password[j]);
+		dest[i] = src[i];
 	}
-	return (0);
+	return (dest);
 }
