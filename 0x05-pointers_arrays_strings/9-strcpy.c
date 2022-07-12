@@ -1,21 +1,39 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <math.h>
+
 /**
- * _strcpy - function
- * @dest: pointer of parameter
- * @src: pointer of parameter
- * Return: return dest value
- **/
-char *_strcpy(char *dest, char *src)
+ * main - print password.
+ *
+ * Return: 0.
+ */
+
+int main(void)
 {
-int i = 0;
-int srcLength = 0;
-while (dest[i] != '\0')
-dest[i++] = '\0';
-i = 0;
-while (src[srcLength] != '\0')
-srcLength++;
-for (i = 0; i < srcLength; i++)
-dest[i] = src[i];
-dest[srcLength] = '\0';
-return (dest);
+	int ascii = 2772, i = 0, j, random;
+	char password[100];
+	time_t t;
+
+	srand((int) time(&t));
+	while (ascii > 126)
+	{
+		random = rand() % 126;
+		password[i] = random;
+		ascii -= random;
+		i++;
+	}
+	if (ascii > 0)
+		password[i] = ascii;
+	else
+	{
+		i--;
+	}
+	
+
+	for (j = 0; j <= i; j++)
+	{
+		printf("%c", password[j]);
+	}
+	return (0);
 }
