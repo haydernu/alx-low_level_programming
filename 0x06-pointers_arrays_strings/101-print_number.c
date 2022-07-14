@@ -1,23 +1,24 @@
 #include <stdio.h>
 
-int main(void)
-{
-int n;
-int a[5];
-int *p;
-
-a[2] = 1024;
-p = &n;
-/*
- * write your line of code here...
- * Remember:
- * - you are not allowed to use a
- * - you are not allowed to modify p
- * - only one statement
- * - you are not allowed to code anything else than this line of code
- * ...so that this prints 98\n 
+/**
+ * print_number - print an integer
+ * @n: integer to print
  **/
 
-printf("a[2] = %d\n", a[2]);
-return (0);
+void print_number(int n)
+
+{
+if (n < 0)
+{
+_putchar('-');
+if (n < -9)
+print_number(n / -10);
+_putchar('0' - n % 10);
+}
+else
+{
+if (n > 9)
+print_number(n / 10);
+_putchar(n % 10 + '0');
+}
 }
