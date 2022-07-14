@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- *  * rot13 - encrypts code
- *   * @s: string to encrypt
- *    * Return: char value
- *     */
+ * rot13 - encrypts code
+ * @s: string to encrypt
+ * Return: char value
+ **/
 
 char *rot13(char *s)
 {
