@@ -28,5 +28,4 @@ return (-1);
 }
 close(file);
 return (1);
-
 }
