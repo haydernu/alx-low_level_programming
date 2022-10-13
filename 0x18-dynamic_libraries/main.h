@@ -1,5 +1,7 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef MAIN_H
+
+#define MAIN_H
+
 
 
 int _putchar(char c);
@@ -43,4 +45,5 @@ char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 
 
-#endif /* _MAIN_H_ */
+
+#endif /*"MAIN_H*/
